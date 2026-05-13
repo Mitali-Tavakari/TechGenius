@@ -1,0 +1,124 @@
+<%- include("partials/header") %>
+
+<article>
+
+  <h2>What is AI and How Does it Work?</h2>
+
+  <p>Artificial Intelligence (AI) refers to the simulation of human cognitive processes by machines. It involves machine learning, deep learning, and natural language processing to enable systems to learn, adapt, and perform complex tasks.</p>
+
+  <h2>Industry Applications</h2>
+  <p>AI’s impact spans nearly every industry. Notable examples include:</p>
+
+  <ul>
+    <li><strong>Healthcare</strong>: AI assists in medical imaging and diagnostics (e.g. detecting tumors) and personalized medicine. For instance, the FDA approved 223 AI-enabled medical devices in 2023 (up from only 6 in 2015), reflecting rapid deployment of AI tools in diagnostics and monitoring.</li>
+    <p></p>
+    <li><strong>Finance</strong>: Banks and insurers use ML for fraud detection, credit scoring, algorithmic trading, and personalized customer service. A recent review notes AI’s pivotal role in credit underwriting, fraud prevention, robo-advisors and digital insurance. These systems spot unusual patterns in transactions or market data far faster than humans.</li>
+    <p></p>
+    <li><strong>Manufacturing</strong>: Smart factories employ AI-driven robots and predictive-maintenance systems to optimize production. For example, AI can predict equipment failures before they happen, scheduling maintenance to avoid costly downtime. Supply-chain optimization and quality control (detecting defects via computer vision) also improve efficiency.</li>
+    <p></p>
+    <li><strong>Education</strong>: AI powers adaptive learning platforms and virtual tutors that personalize lessons to each student’s pace. Automated grading tools and content generation (e.g. summarizing materials) help educators handle routine tasks, allowing more focus on teaching.</li>
+    <p></p>
+    <li><strong>Transportation</strong>: Autonomous vehicles and logistics are revolutionized by AI. Waymo (Alphabet) now provides over 150,000 autonomous rides per week in the U.S., and Baidu’s Apollo Go robotaxis serve multiple Chinese cities. Meanwhile AI algorithms plan delivery routes, manage traffic flow, and improve safety (e.g. collision avoidance).
+      </li>
+</ul>
+<p>These industry examples illustrate how AI is moving from research to real-world use, reshaping services, products, and operations across sectors.</p>
+
+<h2>Challenges and Concerns</h2>
+<p>Despite its promise, AI introduces significant challenges:</p>
+
+<ul>
+  <li><strong>Job Impact</strong>: While AI will transform work, research suggests few occupations will be entirely replaced. Instead, many jobs will be reorganized into tasks split between humans and machines. This disruption can cause uncertainty and requires reskilling. For example, a 2018 MIT study found no occupation is completely safe from automation, but AI tends to take over certain tasks rather than whole professions. Workforce planning and training are thus critical.</li>
+  <p></p>
+  <li><strong>Data Privacy</strong>: AI systems often require large amounts of personal data, raising privacy concerns. Governments and organizations are responding with principles and laws to protect individuals. For instance, the U.S. AI Bill of Rights (a non-binding framework) explicitly emphasizes data privacy and protection from bias in automated systems. Ensuring that AI respects confidentiality and legal limits on data use is a top priority for developers.</li>
+  <p></p>
+  <li><strong>Bias and Fairness</strong>: AI algorithms can inherit or amplify biases present in their training data. This can lead to unfair or discriminatory outcomes (e.g. in loan approvals or hiring tools). Researchers and regulators stress the need for explainable AI (XAI) and accountability. A recent review highlights explainability and robust governance as essential to maintain transparency, fairness and trust in AI-driven finance and other domains. Similarly, experts note that facial recognition and similar systems have shown controversial bias and accuracy issues. Addressing these ethical concerns is an ongoing global effort.</li>
+  <p></p>
+  <li><strong>Trust and Safety</strong>: Misinformation and security threats (like deepfakes or adversarial attacks) are new risks introduced by AI. Society must develop ways to detect and mitigate harmful AI use. In sum, trustworthy AI — systems that are safe, reliable and aligned with human values — is a major concern.
+  </li>
+</ul>
+
+<p>These challenges underscore the importance of responsible AI development. Regulators and industry consortia worldwide are working to establish standards and best practices (see next section) to manage AI’s risks while preserving its benefits.</p>
+
+<h2>Current Trends (2024–2025)</h2>
+<p>Recent trends show AI’s rapid evolution and broadening impact:</p>
+
+<ul>
+  <li><strong>Explosion of AI Investment and Adoption</strong>: According to the 2025 AI Index, global AI saw record investment in 2024. U.S. private AI funding reached $109.1 billion (far more than other regions) and 78% of organizations reported using AI, up from 55% in 2023. Generative AI drew especially strong interest, attracting about $33.9 billion in 2024 (an 18.7% increase year-over-year). This surge reflects enterprises pushing AI from pilot projects into production.</li>
+  <p></p>
+  <li><strong>Generative AI Integration</strong>: Generative models have moved from novelty toward everyday tools. Many software vendors are embedding AI features into familiar products (e.g. Microsoft’s Copilot assistants in Office, Adobe’s Generative Fill in Photoshop). Business leaders now explore practical uses beyond chatbots, and organizations are developing AI agents (digital “coworkers”) for tasks like code writing, data analysis and customer support. Researchers also focus on multimodal models that can handle text, images, audio etc., anticipating AI that better understands the real world.</li>
+  <p></p>
+  <li><strong>Open and Smaller Models</strong>: The trend is toward more open-access, efficient AI models. In 2023, companies released 149 new “foundation models,” and 65.7% were open-source (free for anyone to use). The pie chart below illustrates this: most new models are publicly available, with only a minority closed or limited-access. (Smaller, open models like Mistral’s or Meta’s Llama 2 are proving that efficiency and openness can rival the largest proprietary systems.) This democratization allows more developers and organizations to build on state-of-the-art AI.</li>
+</ul>
+
+<div class="chart-container">
+  <h3 style="text-align: center;">Foundation Models, 2023</h3>
+  <canvas id="aiAccessChart"></canvas>
+</div>
+
+<script>
+  const ctxAccess = document.getElementById('aiAccessChart').getContext('2d');
+
+  const aiAccessChart = new Chart(ctxAccess, {
+    type: 'pie',
+    data: {
+      labels: ['Open-source', 'Limited-access (API)', 'No Public Access'],
+      datasets: [{
+        label: 'AI Model Access (2023)',
+        data: [98, 23, 28],
+        backgroundColor: [
+          '#36a2eb', // Open-source
+          '#ffcd56', // Limited-access
+          '#ff6384'  // No access
+        ],
+        borderColor: '#ffffff',
+        borderWidth: 9
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        },
+        title: {
+          display: true,
+          text: 'Access Levels of Foundation AI Models (2023)'
+        }
+      }
+    }
+  });
+</script>
+
+  <p>Chart: In 2023, about two-thirds of newly released “foundation” AI models were open-source. Only 23 of 149 models were limited-access (e.g. via API) and 28 had no public access.</p>
+
+<ul>
+  <li><strong>Regulatory Momentum</strong>: Governments are moving to regulate AI. The European Union’s landmark AI Act became law in 2024. It establishes a risk-based framework (defining “high-risk” AI uses, requiring conformity assessments) and creates a European AI Office to oversee enforcement. In the U.S., regulation is taking a more voluntary route: agencies like the FTC warn against unsafe AI practices, and federal guidance (e.g. the AI Bill of Rights) lays out principles. Overall, 2024–25 saw many new AI proposals (for privacy, safety, and accountability) but no single global standard yet. International organizations (e.g. ITU) are advancing technical standards for “trustworthy AI” to complement laws.
+  </li>
+  <p></p>
+  <li><strong>AI in Daily Life</strong>: AI continues embedding itself in everyday services. Hundreds of medical AI tools (X-rays, MRIs, diagnostics) are now FDA-approved, voice assistants (Siri, Alexa) keep improving, and autonomous vehicles are becoming more common. For example, Waymo’s autonomous ride-hailing service and Baidu’s robotaxis are delivering real-world self-driving services. These examples show AI moving “from lab to life” in 2024–25.</li>
+</ul>
+
+<p>These trends – from generative AI breakthroughs to new regulations – highlight that AI is at a peak of public expectation and investment. Experts note the hype may wane (moving into a “trough of disillusionment”), but practical, productive uses of AI are already here..</p>
+
+<h2>Leading Tools, Platforms, and Startups</h2>
+<p>The AI ecosystem includes both major incumbents and innovative newcomers. Noteworthy examples include:</p>
+
+<ul>
+  <li><strong>Cloud AI Platforms</strong>: Major tech companies dominate with full-featured AI services. Microsoft’s Azure AI (including Azure Machine Learning and Azure OpenAI Service) and IBM’s Watson AI offer end-to-end tools for building, training, and deploying models. Google Cloud AI (Vertex AI) and AWS SageMaker are other leading cloud platforms. These environments provide scalable infrastructure and pre-built AI components, making enterprise adoption easier.</li>
+  <p></p>
+  <li><strong>AutoML and Low-Code Tools</strong>: Platforms like DataRobot, Dataiku, and H2O.ai automate machine learning workflows, enabling users to develop models with minimal coding. Similarly, OutSystems and Appian offer low-code AI integration for building apps quickly. (For example, Forbes notes growing investment in platforms that “accelerate digital transformation” with AI.) These tools exemplify the low-code trend, letting business analysts and developers deploy AI models without deep data science expertise.</li>
+  <p></p>
+  <li><strong>AI Model Hubs</strong>: <em>Hugging Face</em>has become a central repository for open-source AI models and datasets. It provides Transformer libraries and hosting for thousands of pre-trained models (NLP, vision, etc.), fostering collaboration. Startups like Mistral AI (new French LLM developer) and Cohere (custom large-language-models) are also pushing open models. This culture of sharing contrasts with older “black box” models.</li>
+  <p></p>
+  <li><strong>Generative AI Services</strong>: For creative content, platforms like OpenAI (ChatGPT/GPT-4), Anthropic (Claude), and Google DeepMind (Bard/Gemini) lead in text-generation services. In image and media, Stability AI (Stable Diffusion) and Midjourney provide cutting-edge image synthesis. ElevenLabs is notable for AI-based voice cloning. These companies raised substantial funding as interest in generative tools soared (e.g. DeepL, a neural translation company, raised $300M in May 2024).</li>
+  <p></p>
+  <li><strong>Specialized AI Startups</strong>: Many niche innovators exemplify AI’s breadth. For instance, Uizard (Copenhagen) offers an AI tool that converts hand-drawn wireframes into coded UI designs, accelerating app development. Moveworks (Mountain View) automates employee IT support via conversational AI. Frame AI (New York) uses AI to analyze customer feedback and extract insights for support teams. These examples illustrate how startups are embedding AI into specific business functions.</li>
+</ul>
+
+  <p>In each category, the “leaders” combine advanced AI capabilities with user-friendly platforms. Companies looking to leverage AI today can choose from a rich landscape: for example, a developer might use OpenAI’s GPT-4 via API for language tasks, train custom models on Azure or AWS for enterprise needs, and explore open-source models on Hugging Face for experimentation. Meanwhile, emerging firms (like DeepMind, OpenAI, or new LLM startups such as Mistral) continue to push the frontier of what AI can do.</p>
+
+  <h2>Conclusion</h2>
+  <p>AI is not a trend — it’s the foundation of the future. As technology evolves, it is essential to balance innovation with responsibility to ensure a fair, inclusive, and sustainable future for all.</p>
+</article>
+
+<%- include("partials/footer") %>
