@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-// Set EJS as templating engine
+// EJS
 app.set("view engine", "ejs");
 
 // Static files
@@ -20,10 +20,14 @@ app.get("/about", (req, res) => {
   res.render("about", { title: "About" });
 });
 
-// PORT
-const PORT = process.env.PORT || 3000;
+// Export app for Vercel
+module.exports = app;
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Localhost only
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
