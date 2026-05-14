@@ -1,11 +1,14 @@
 const express = require("express");
+const path = require("path");
+
 const app = express();
 
 // EJS
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 // Static files
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
 app.get("/", (req, res) => {
@@ -20,7 +23,7 @@ app.get("/about", (req, res) => {
   res.render("about", { title: "About" });
 });
 
-// Export app for Vercel
+// Export for Vercel
 module.exports = app;
 
 // Localhost only
